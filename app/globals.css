@@ -210,4 +210,44 @@
   .neon-border-glow {
     animation: border-glow 2s ease-in-out infinite;
   }
+
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in-left {
+    from { opacity: 0; transform: translateX(-24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes fade-in-right {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .journey-fade-in {
+    opacity: 0;
+  }
+
+  .journey-fade-in.visible {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+
+  .journey-fade-in.visible.from-left {
+    animation-name: fade-in-left;
+  }
+
+  .journey-fade-in.visible.from-right {
+    animation-name: fade-in-right;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .journey-fade-in.visible,
+    .journey-fade-in.visible.from-left,
+    .journey-fade-in.visible.from-right {
+      animation: none;
+      opacity: 1;
+    }
+  }
 }
