@@ -10,14 +10,9 @@ const AboutSection = () => {
 
                 <div className="mt-6 space-y-4 text-base leading-relaxed text-gray-400 sm:text-lg">
                     <p>
-                        Full-Stack Developer with approximately 3 years of professional experience
-                        building web applications across frontend and backend development. Experienced
-                        with <span className="text-primary">React</span>,{' '}
-                        <span className="text-primary">Next.js</span>,{' '}
-                        <span className="text-primary">TypeScript</span>,{' '}
-                        <span className="text-primary">Laravel</span> and{' '}
-                        <span className="text-primary">Vue.js</span>, with hands-on experience
-                        in REST APIs, responsive UI and database integration.
+                        I've been building things with code for much longer than I've been doing it professionally. What started with a small driving game eventually turned into experimenting with electronics, programming inside games, building websites, and eventually working as a full-stack developer.
+
+                        I still approach programming in much the same way — find something interesting, figure out how it works, and build something with it.
                     </p>
 
                     <p>
