@@ -94,7 +94,7 @@ const ExperienceSection = () => {
                     ))}
                 </div>
 
-                <div id="contact" className="mt-16">
+                <div className="mt-16">
                     <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
                         <span className="text-primary">Education</span>
                     </h3>
