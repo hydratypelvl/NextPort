@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 
 const navItems = [
     { label: 'About', id: 'about' },
-    { label: 'Skills', id: 'skills' },
+    { label: 'Journey', id: 'journey' },
     { label: 'Projects', id: 'projects' },
     { label: 'Experience', id: 'experience' },
+    { label: 'Skills', id: 'skills' },
     { label: 'Contact', id: 'contact' },
 ];
 
@@ -16,31 +17,26 @@ export default function NavbarSection() {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActive(entry.target.id);
-                    }
-                });
-            },
-            { rootMargin: '-40% 0px -40% 0px' }
-        );
-
-        navItems.forEach((item) => {
-            const el = document.getElementById(item.id);
-            if (el) observer.observe(el);
-        });
-
-        return () => observer.disconnect();
-    }, []);
-
-    useEffect(() => {
         const onScroll = () => {
             setScrolled(window.scrollY > 20);
+
+            const offset = 120;
+            let current = '';
+
+            for (const item of navItems) {
+                const el = document.getElementById(item.id);
+                if (!el) continue;
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= offset) {
+                    current = item.id;
+                }
+            }
+
+            if (current) setActive(current);
         };
 
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
@@ -57,11 +53,7 @@ export default function NavbarSection() {
                     }
                 `}
             >
-                <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                    <a href="#" className="text-lg font-semibold text-foreground hover:text-primary transition-colors">
-                        Rihards
-                    </a>
-
+                <div className="mx-auto flex max-w-6xl items-center justify-center px-6 py-4 md:justify-center">
                     <ul className="hidden md:flex items-center gap-8">
                         {navItems.map((item) => (
                             <li key={item.id}>
@@ -83,7 +75,7 @@ export default function NavbarSection() {
 
                     <button
                         onClick={() => setOpen(!open)}
-                        className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
+                        className="fixed right-6 top-4 z-50 md:hidden text-muted-foreground hover:text-foreground transition-colors"
                         aria-label="Toggle menu"
                     >
                         {open ? (
@@ -120,8 +112,6 @@ export default function NavbarSection() {
                                 {item.label}
                             </a>
                         ))}
-                        <div className="mt-4">
-                        </div>
                     </div>
                 </div>
             )}
