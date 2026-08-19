@@ -1,9 +1,9 @@
-import React from 'react'
+    import React from 'react'
 import { Mail, Linkedin, Github, Phone } from 'lucide-react'
 
 const ContactSection = () => {
     return (
-        <section className="relative w-full py-24">
+        <section id="contact" className="relative w-full py-24">
             <div className="mx-auto max-w-3xl px-4 text-center">
 
                 <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
