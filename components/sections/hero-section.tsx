@@ -47,7 +47,7 @@ const HeroSection = () => {
                                 View Projects
                             </Button>
                         </a>
-                        <a href="/resume.pdf">
+                        <a href="/resume.pdf" target="_blank">
                             <Button size="lg" variant="outline" className="border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,246,255,0.2)] transition-all duration-300">
                                 Resume <ArrowDown size={16} className="ml-2" />
                             </Button>
