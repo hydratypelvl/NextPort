@@ -38,18 +38,6 @@ const chapters: TimelineChapter[] = [
         visual: 'block',
     },
     {
-        id: 'cssbattle',
-        title: 'CSSBattle',
-        subtitle: 'Where I fell in love with the frontend',
-        story: [
-            'CSSBattle turned CSS into a puzzle. How few characters can I use? What\'s the most elegant way to draw this shape?',
-            'It changed how I see code — not just as instructions, but as craft.',
-            'I wasn\'t just writing CSS anymore. I was designing with it.',
-        ],
-        tags: ['CSS', 'Visual Design', 'Optimization'],
-        visual: 'css',
-    },
-    {
         id: 'electronics',
         title: 'Electronics & Arduino',
         subtitle: 'Breaking things to learn how they work',
@@ -60,6 +48,18 @@ const chapters: TimelineChapter[] = [
         ],
         tags: ['Arduino', 'Hardware', 'Curiosity'],
         visual: 'circuit',
+    },
+    {
+        id: 'cssbattle',
+        title: 'CSSBattle',
+        subtitle: 'Where I fell in love with the frontend',
+        story: [
+            'CSSBattle turned CSS into a puzzle. How few characters can I use? What\'s the most elegant way to draw this shape?',
+            'It changed how I see code — not just as instructions, but as craft.',
+            'I wasn\'t just writing CSS anymore. I was designing with it.',
+        ],
+        tags: ['CSS', 'Visual Design', 'Optimization'],
+        visual: 'css',
     },
     {
         id: 'game-apis',
@@ -241,9 +241,12 @@ export default function JourneySection() {
                 <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                     My <span className="text-primary">Journey</span>
                 </h2>
-                <p className="mt-3 max-w-xl text-gray-400">
-                    I didn&apos;t start programming because I wanted to become a developer.
-                    I started because I was curious about what I could build.
+                <p className="mt-3 text-gray-400">
+                    It started with curiosity.
+
+                    I experimented with Flash animations, Minecraft modpacks, Lua scripts, automation bots, and even hosted my own Minecraft servers. I wasn't trying to become a programmer — I just wanted to understand how things worked and see what I could build.
+
+                    Eventually, that curiosity turned into programming.
                 </p>
 
                 <div className="relative mt-16">
