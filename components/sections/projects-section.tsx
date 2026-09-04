@@ -66,21 +66,7 @@ const compactProjects: CompactProject[] = [
         image: '/project_two.png',
         liveUrl: 'https://r2todo.vercel.app/riepas',
         codeUrl: 'https://github.com/hydratypelvl/r2todo',
-    },
-    {
-        title: 'Checkmate',
-        description: 'A collaborative todo application \u2014 create lists, track progress, share with others.',
-        tags: ['TypeScript', 'Next.js', 'Productivity'],
-        image: '/spellio.png',
-        codeUrl: 'https://github.com/hydratypelvl/Checkmate',
-    },
-    {
-        title: 'Next.js Dashboard',
-        description: 'An admin dashboard with data visualization, user management, and modern UI components.',
-        tags: ['TypeScript', 'Next.js', 'Dashboard'],
-        image: '/window.svg',
-        codeUrl: 'https://github.com/hydratypelvl/nextjs-dashboard',
-    },
+    }
 ]
 
 function BrowserMockup({ src, alt }: { src: string; alt: string }) {
@@ -188,7 +174,7 @@ function FeaturedProject({
                             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                 <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(0,246,255,0.3)] hover:shadow-[0_0_25px_rgba(0,246,255,0.5)] transition-all duration-300">
                                     <ExternalLink size={14} />
-                                    Explore
+                                    Live
                                 </Button>
                             </a>
                         )}
